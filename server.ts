@@ -75,16 +75,24 @@ async function startServer() {
       },
     });
     app.use(viteDevServer.middlewares);
+
+    // Create the handler once — pass build as a function so React Router v7
+    // resolves the virtual module lazily (avoids concurrent ssrLoadModule
+    // deadlocks when multiple requests arrive before the first SSR build
+    // finishes).
+    const remixHandler = createRequestHandler({
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      build: () => viteDevServer.ssrLoadModule("virtual:react-router/server-build") as unknown as Promise<ServerBuild>,
+      getLoadContext: () => ({}),
+    });
+
     app.all("*", async (req, res, next) => {
       // Skip logging for static assets and dev tools
       if (!req.path.startsWith("/.well-known") && !req.path.includes("favicon")) {
         console.log(`[Remix Handler] ${req.method} ${req.path}`);
       }
       try {
-        return await createRequestHandler({
-          build: await viteDevServer.ssrLoadModule("virtual:react-router/server-build") as unknown as ServerBuild,
-          getLoadContext: () => ({}),
-        })(req, res, next);
+        return await remixHandler(req, res, next);
       } catch (error) {
         if (error instanceof Error) {
           viteDevServer.ssrFixStacktrace(error);
