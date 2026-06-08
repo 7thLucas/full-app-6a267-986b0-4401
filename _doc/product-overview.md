@@ -18,10 +18,10 @@ MEX is a full-stack SaaS web application that allows users to upload, process, a
 - **Admin Dashboard**: RBAC-based admin interface for user management, usage metrics, system configuration, and audit logs.
 
 ## Positioning
-Video Analyzer positions itself as the intelligent backend for video-heavy workflows — bridging the gap between raw recorded content and structured business intelligence. It is a developer-friendly SaaS template and product that teams can deploy and extend.
+MEX positions itself as the intelligent backend for video-heavy workflows — bridging the gap between raw recorded content and structured business intelligence. It is a developer-friendly SaaS template and product that teams can deploy and extend.
 
 ## Brand & Tone
-- **Brand name**: Video Analyzer
+- **Brand name**: MEX
 - **Tone**: Professional, precise, and quietly powerful. The product is calm and analytical — not flashy.
 - **Visual style**: Clean, data-forward, with a dark-tinted primary palette and crisp white surfaces.
 - **Brand colors**:
