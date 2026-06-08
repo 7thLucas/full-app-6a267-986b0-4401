@@ -1,0 +1,65 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content-col { width: 52%; }
+  .mode-landscape .sl-visual-col { width: 48%; }
+  .mode-portrait .sl-content-col { width: 100%; }
+  .mode-portrait .sl-visual-col { width: 100%; flex: 1; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: content column -->
+    <div class="sl-content-col flex flex-col justify-between p-12" style="background: #1E293B;">
+      <!-- Top badge -->
+      <div>
+        <span class="inline-block text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full" style="background: #6366F1; color: #fff;">AI-Powered Analysis</span>
+      </div>
+
+      <!-- Headline block -->
+      <div class="flex flex-col gap-5">
+        <h1 class="font-extrabold leading-tight" style="font-size: 2.8rem; color: #F8FAFC; letter-spacing: -0.02em;">
+          Turn Every Video<br>Into Actionable<br>Intelligence
+        </h1>
+        <p class="text-base leading-relaxed" style="color: #94A3B8; max-width: 34ch;">
+          Automated transcription, scene detection, sentiment analysis, and AI summaries — structured insights from raw video in minutes.
+        </p>
+
+        <!-- CTA pill -->
+        <div class="flex items-center gap-3 mt-2">
+          <span class="px-5 py-2 rounded-full text-sm font-semibold" style="background: #6366F1; color: #fff;">Explore the Platform</span>
+          <span class="text-sm" style="color: #38BDF8;">Video Analyzer</span>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right: visual column -->
+    <div class="sl-visual-col relative overflow-hidden">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=abstract%20dark%20navy%20blue%20video%20waveform%20and%20timeline%20data%20visualization%2C%20glowing%20indigo%20and%20sky%20blue%20lines%2C%20cinematic%20minimal%20tech%20aesthetic%2C%20no%20text"
+        alt="Video analysis visualization"
+        class="w-full h-full object-cover"
+      />
+      <!-- Subtle overlay for blending edge -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, #1E293B 0%, transparent 30%);"></div>
+      <!-- Stat chips floating -->
+      <div class="absolute bottom-10 right-8 flex flex-col gap-3">
+        <div class="flex items-center gap-2 px-4 py-2 rounded-xl" style="background: rgba(30,41,59,0.85); border: 1px solid #334155;">
+          <span class="text-xs font-bold" style="color: #38BDF8;">99%</span>
+          <span class="text-xs" style="color: #CBD5E1;">Transcription Accuracy</span>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 rounded-xl" style="background: rgba(30,41,59,0.85); border: 1px solid #334155;">
+          <span class="text-xs font-bold" style="color: #6366F1;">10x</span>
+          <span class="text-xs" style="color: #CBD5E1;">Faster Review</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
