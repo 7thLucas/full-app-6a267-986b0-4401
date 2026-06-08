@@ -1,0 +1,64 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12 gap-7">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color: #6366F1;">What It Does</span>
+      <h2 class="text-3xl font-extrabold" style="color: #1E293B; letter-spacing: -0.02em;">Core Features</h2>
+    </div>
+
+    <!-- Persona chips -->
+    <div class="flex flex-wrap gap-2">
+      <span class="px-4 py-1.5 rounded-full text-sm font-semibold" style="background: #6366F1; color: #fff;">Content Creators</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium border" style="background: #F8FAFC; color: #475569; border-color: #E2E8F0;">Business Analysts</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium border" style="background: #F8FAFC; color: #475569; border-color: #E2E8F0;">Admins</span>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="sl-grid grid gap-4 flex-1">
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #1E293B;">
+        <span class="text-2xl">🎬</span>
+        <h3 class="text-sm font-bold" style="color: #F8FAFC;">Video Upload & Management</h3>
+        <p class="text-xs leading-relaxed" style="color: #94A3B8;">Upload via browser, track processing status in real time, and manage a personal media library.</p>
+      </div>
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #EEF2FF; border: 1px solid #C7D2FE;">
+        <span class="text-2xl" style="color: #6366F1;">📝</span>
+        <h3 class="text-sm font-bold" style="color: #1E293B;">AI Transcription</h3>
+        <p class="text-xs leading-relaxed" style="color: #475569;">Automatic speech-to-text with speaker diarization and timestamped output. Every word, attributed and indexed.</p>
+      </div>
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #F0F9FF; border: 1px solid #BAE6FD;">
+        <span class="text-2xl" style="color: #0284C7;">🎞️</span>
+        <h3 class="text-sm font-bold" style="color: #1E293B;">Scene & Object Detection</h3>
+        <p class="text-xs leading-relaxed" style="color: #475569;">Frame-level analysis identifying scene transitions, key objects, and visual events throughout the video.</p>
+      </div>
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #F8FAFC; border: 1px solid #E2E8F0;">
+        <span class="text-2xl">📊</span>
+        <h3 class="text-sm font-bold" style="color: #1E293B;">Sentiment & Tone Analysis</h3>
+        <p class="text-xs leading-relaxed" style="color: #475569;">Automated sentiment scoring across the timeline — identify emotional peaks, tone shifts, and engagement moments.</p>
+      </div>
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #F8FAFC; border: 1px solid #E2E8F0;">
+        <span class="text-2xl">✨</span>
+        <h3 class="text-sm font-bold" style="color: #1E293B;">Content Summarization</h3>
+        <p class="text-xs leading-relaxed" style="color: #475569;">AI-generated summaries and chapter breakdowns that condense long videos into scannable highlights.</p>
+      </div>
+
+      <div class="flex flex-col gap-2 rounded-2xl p-5" style="background: #F8FAFC; border: 1px solid #E2E8F0;">
+        <span class="text-2xl">🔍</span>
+        <h3 class="text-sm font-bold" style="color: #1E293B;">Search & Filtering</h3>
+        <p class="text-xs leading-relaxed" style="color: #475569;">Full-text search across transcripts and metadata with filters by date, duration, speaker, and sentiment score.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
