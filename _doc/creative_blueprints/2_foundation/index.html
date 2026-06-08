@@ -1,0 +1,50 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; align-items: stretch; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 55%; }
+  .mode-landscape .sl-right { width: 45%; }
+  .mode-portrait .sl-left { width: 100%; }
+  .mode-portrait .sl-right { width: 100%; flex: 1; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: narrative zones -->
+    <div class="sl-left flex flex-col justify-center gap-8 p-12">
+
+      <!-- Section label -->
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color: #6366F1;">The Problem & Solution</span>
+
+      <!-- Problem zone -->
+      <div class="rounded-2xl p-7" style="background: #F1F5F9; border-left: 4px solid #6366F1;">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #6366F1;">The Problem</p>
+        <h2 class="text-xl font-bold mb-3" style="color: #1E293B;">Video content is rich — but almost entirely unsearchable.</h2>
+        <p class="text-sm leading-relaxed" style="color: #475569;">
+          Teams record hours of meetings, interviews, and training sessions but have no practical way to extract meaning. Reviewing footage manually is slow, costly, and inconsistent. Valuable signals — sentiment shifts, key decisions, recurring topics — stay buried.
+        </p>
+      </div>
+
+      <!-- Solution zone -->
+      <div class="rounded-2xl p-7" style="background: #1E293B;">
+        <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #38BDF8;">The Solution</p>
+        <h2 class="text-xl font-bold mb-3" style="color: #F8FAFC;">Video Analyzer turns recordings into structured intelligence — automatically.</h2>
+        <p class="text-sm leading-relaxed" style="color: #94A3B8;">
+          Upload a video and receive a full transcript with speaker labels, scene-by-scene breakdowns, sentiment timelines, and an AI-generated summary — all searchable, shareable, and ready to act on. No manual review required.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Right: supporting visual -->
+    <div class="sl-right relative overflow-hidden" style="background: #F8FAFC;">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=overhead%20desk%20scene%20with%20laptop%20showing%20video%20transcript%20analysis%20dashboard%2C%20clean%20minimal%20workspace%2C%20soft%20light%2C%20indigo%20and%20white%20tones%2C%20professional"
+        alt="Video analysis dashboard context"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 60%, #F8FAFC 100%);"></div>
+    </div>
+
+  </div>
+</section>
