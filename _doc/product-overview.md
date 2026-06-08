@@ -1,7 +1,7 @@
-# Product Overview: Video Analyzer
+# Product Overview: MEX
 
 ## What It Is
-Video Analyzer is a full-stack SaaS web application that allows users to upload, process, and gain AI-powered insights from video content. It provides automated transcription, scene detection, sentiment analysis, and content summarization — turning raw video files into structured, searchable, and actionable intelligence.
+MEX is a full-stack SaaS web application that allows users to upload, process, and gain AI-powered insights from video content. It provides automated transcription, scene detection, sentiment analysis, and content summarization — turning raw video files into structured, searchable, and actionable intelligence.
 
 ## Users & Personas
 - **Content Creators**: YouTubers, podcasters, and educators who want automatic transcripts, chapter markers, and highlight clips from their video content.
