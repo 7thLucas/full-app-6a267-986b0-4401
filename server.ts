@@ -76,13 +76,20 @@ async function startServer() {
     });
     app.use(viteDevServer.middlewares);
 
-    // Create the handler once — pass build as a function so React Router v7
-    // resolves the virtual module lazily (avoids concurrent ssrLoadModule
-    // deadlocks when multiple requests arrive before the first SSR build
-    // finishes).
+    // Deduplicate concurrent ssrLoadModule calls: all requests that arrive
+    // while a build is in flight share the same promise (prevents Vite v6 SSR
+    // deadlocks). Once the build resolves the cache is cleared so subsequent
+    // requests trigger a fresh load and HMR still works.
+    let _pendingBuild: Promise<ServerBuild> | null = null;
     const remixHandler = createRequestHandler({
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-      build: () => viteDevServer.ssrLoadModule("virtual:react-router/server-build") as unknown as Promise<ServerBuild>,
+      build: () => {
+        if (!_pendingBuild) {
+          _pendingBuild = (viteDevServer.ssrLoadModule("virtual:react-router/server-build") as unknown as Promise<ServerBuild>)
+            .finally(() => { _pendingBuild = null; });
+        }
+        return _pendingBuild;
+      },
       getLoadContext: () => ({}),
     });
 
